@@ -1,0 +1,66 @@
+body {
+    background-color: #0C2D48;
+    color: #fff;
+}
+
+.media-body {
+    max-width: 540px;
+    background-color: #0C2D48;
+    width: 100%;
+    float: left;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.media-body:hover {
+    background-color: #0B415A;
+    box-shadow: 0 0 2px 4px rgba(0, 140, 186, 0.5);
+}
+
+.cafe-image-preview {
+    aspect-ratio: 1;
+    border-radius: 8%;
+    object-fit: cover;
+}
+
+.cafe-name {
+    color: #fff;
+    font-size: 125%;
+}
+
+.features {
+    margin: auto;
+    width: 20%;
+}
+
+.seats-price {
+    color: #fff;
+}
+
+.positive {
+    color: #FFD700;
+}
+
+.negative {
+    color: #808080;
+}
+
+.cafe-location {
+    color: #808080;
+    font-size: 100%;
+}
+
+.preview-link {
+    text-decoration: none;
+}
+
+#delete-icon {
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    color: #fff;
+}
+
+#delete-icon:hover {
+    color: #ff0000;
+}
