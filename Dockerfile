@@ -13,3 +13,4 @@ RUN pip install -r requirements.txt
 RUN mkdir /work
 COPY . /work
 WORKDIR /work
+RUN python run.py
