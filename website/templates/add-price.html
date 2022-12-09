@@ -21,7 +21,7 @@
           <div class="card-header">
             Predict</div>
           <div class="card-body">
-            <form action="/add-price/" method="POST" id="predict_form">
+            <form action="/" method="POST" id="predict_form">
               <p>open price: <input type="number" placeholder="" name="open" required="required"></p>
               <p>low price: <input type="number" placeholder="" name="low" required="required"></p>
               <p>high price: <input type="number" placeholder="" name="high" required="required"></p>
@@ -36,67 +36,6 @@
             </form>
         </div>
         {{ prediction }}
-        <div>
-              <div class="card mb-4">
-              <div class="card-header">
-                  History
-              </div>
-              <div class="card-body">
-                  <div class="table-responsive">
-                      {% if prices|length < 1 %}
-                      <h4>no history</h4>
-                      {% else %}
-                      <table class="table table-bordered" id="dataTablePrice" width="100%" cellspacing="0">
-                          <thead>
-                              <tr>
-                                <th>Date</th>
-                                <th>open</th>
-                                <th>low</th>
-                                <th>high</th>
-                                <th>market_cap</th>
-                                <th>market_cap_global</th>
-                                <th>percent_change_24h</th>
-                                <th>close</th>
-                                <th>Date</th>
-                              </tr>
-                          </thead>
-                          <tfoot>
-                              <tr>
-                                <th>Date</th>
-                                <th>open</th>
-                                <th>low</th>
-                                <th>high</th>
-                                <th>market_cap</th>
-                                <th>market_cap_global</th>
-                                <th>percent_change_24h</th>
-                                <th>close</th>
-                              </tr>
-                          </tfoot>
-                          <tbody>
-                              {% for price in prices %}
-                              <tr>
-                                  <td>{{ price.date_created.date() }}</td>
-                                  <td>{{ price.open }}</td>
-                                  <td>{{ price.low }}</td>
-                                  <td>{{ price.high }}</td>
-                                  <td>{{ price.market_cap }}</td>
-                                  <td>{{ price.market_cap_global }}</td>
-                                  <td>{{ price.percent_change_24h }}</td>
-                                  <td>{{ price.close }}</td>
-                                  <td>
-                                      <a href="/delete/{{ price.price_id }}">Delete</a>
-                                      
-                                  </td>
-                              </tr>
-                              {% endfor %}
-                          </tbody>
-                      </table>
-                      {% endif %}
-              </div>
-          </div>
-              </div>
-          </div>
-
         </div>
   </div>
 </main>

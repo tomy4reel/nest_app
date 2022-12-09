@@ -1,3 +1,4 @@
+'''
 from website import db, login_manager
 from flask_login import UserMixin
 from datetime import datetime
@@ -35,3 +36,5 @@ class Price(db.Model):
 
 db.create_all()
 db.session.commit()
+
+'''
